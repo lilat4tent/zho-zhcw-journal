@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>澳门彩 · 站点介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #f7f5f2;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    /* 深色头图 */
+    .hero {
+      background: linear-gradient(145deg, #0a141e 0%, #162a38 100%);
+      padding: 3.5rem 1.5rem 3rem;
+      text-align: center;
+      color: #ebe9e3;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+      color: #c4cdd6;
+      line-height: 1.7;
+    }
+
+    /* 浅色正文区 */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.2rem 1.5rem 3.5rem;
+    }
+
+    .intro-card {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 2.2rem 2rem 2rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.04);
+      margin-bottom: 2.2rem;
+    }
+
+    .intro-card p {
+      margin-bottom: 1.25rem;
+      font-size: 1rem;
+    }
+
+    .intro-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 特点列表——竖排柔和卡片 */
+    .feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      margin: 2rem 0 1.8rem;
+    }
+
+    .feature-item {
+      background: #f2f0ec;
+      border-left: 5px solid #b0754f;
+      padding: 1rem 1.4rem;
+      border-radius: 12px;
+      transition: background 0.2s;
+    }
+
+    .feature-item:hover {
+      background: #ebe6df;
+    }
+
+    .feature-item strong {
+      font-weight: 600;
+      color: #1a2e3f;
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 1.05rem;
+    }
+
+    .feature-item span {
+      font-size: 0.96rem;
+      color: #3f3f3f;
+    }
+
+    /* 温和结尾区域 */
+    .closing-note {
+      background: #e8e3db;
+      border-radius: 24px;
+      padding: 2rem 2rem 1.8rem;
+      margin-top: 1.2rem;
+      text-align: left;
+      border: 1px solid #d6cfc4;
+    }
+
+    .closing-note p {
+      font-size: 0.97rem;
+      color: #2e2a25;
+      margin-bottom: 0.5rem;
+    }
+
+    .closing-note p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    /* 链接强调色 */
+    a {
+      color: #b5613a;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-bottom 0.2s, color 0.2s;
+    }
+
+    a:hover {
+      border-bottom-color: #b5613a;
+      color: #904d2c;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #d0c9be;
+      margin: 1.6rem 0 1.2rem;
+      opacity: 0.5;
+    }
+
+    .footer-meta {
+      font-size: 0.85rem;
+      color: #7e756a;
+      text-align: center;
+      margin-top: 2rem;
+      border-top: 1px solid #d9d2c8;
+      padding-top: 1.8rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 700px) {
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+      .hero p {
+        font-size: 0.96rem;
+      }
+      .intro-card {
+        padding: 1.6rem 1.2rem;
+      }
+      .feature-item {
+        padding: 0.9rem 1rem;
+      }
+      .closing-note {
+        padding: 1.5rem 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 1.4rem 1rem 2.5rem;
+      }
+      .hero {
+        padding: 2.5rem 1rem 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="hero">
+  <h1>关于澳门彩</h1>
+  <p>一个致力于提供澳门彩票资讯与简明参考的站点，以平实视角介绍规则与历史，方便读者建立基本认知。</p>
+</header>
+
+<main class="container">
+
+  <!-- 开篇：故事叙述式短句 + 承接段落 -->
+  <div class="intro-card">
+    <p>在各类彩票信息中，澳门彩因其独特的发行背景和开奖机制，吸引了许多希望了解不同区域彩票文化的读者。这个站点并非官方机构，而是一个以介绍和说明为主的资料页，帮助初次接触的人快速理解澳门彩的基本面貌。</p>
+    <p>站内内容围绕澳门彩票的核心信息展开，从玩法结构到开奖节奏，均有简洁的梳理。如果你正在寻找一个较为系统的信息起点，那么<a href="https://cn-macaulottery.com">澳门彩</a>这个页面或许能提供一份清晰的参考框架。</p>
+  </div>
+
+  <!-- 承接段落：可信说明与站点定位 -->
+  <div class="intro-card" style="background: #fcfaf7;">
+    <p>需要说明的是，该网站不提供投注、预测或任何形式的资金交易，所有介绍均基于公开资料与历史开奖记录整理。信息内容偏向知识型，适合用作背景了解与规则比对，而非操作指南。</p>
+    <p>同时，站内也收录了一些常见概念的解释，比如号码分布、奖级设置等，对于希望进一步阅读的读者，这些内容可以作为延伸了解的入口。</p>
+  </div>
+
+  <!-- 特点列表 -->
+  <h2 style="font-weight: 500; font-size: 1.3rem; margin: 0.5rem 0 0.8rem; color: #1b2c3b;">站点内容特点</h2>
+  <div class="feature-list">
+    <div class="feature-item">
+      <strong>规则说明</strong>
+      <span>用平实的文字解释澳门彩的基本玩法、选号范围与开奖频率，去掉冗余术语，降低理解门槛。</span>
+    </div>
+    <div class="feature-item">
+      <strong>历史开奖归档</strong>
+      <span>整理并展示往期开奖号码与日期，方便查阅与趋势观察，所有数据均保持原始记录格式。</span>
+    </div>
+    <div class="feature-item">
+      <strong>术语简释</strong>
+      <span>针对常见词汇如「直选」「组选」「和值」等提供简短释义，辅助新手快速适应语境。</span>
+    </div>
+  </div>
+
+  <!-- 场景与提示（自然融入） -->
+  <div class="intro-card" style="background: #f4f2ed;">
+    <p>在实际使用场景中，不少读者将澳门彩站点作为了解不同地区彩票差异的参考资料。例如，在对比澳门与内地彩票规则时，站内列出的玩法结构就能提供直观对照。</p>
+    <p>需要留意的是，彩票信息存在时效性，规则也可能随当地政策微调。建议在阅读时结合最新公告进行确认，网站也会尽量同步更新内容，但无法保证绝对实时。</p>
+  </div>
+
+  <!-- FAQ 摘要风格段落（温和结尾前） -->
+  <div class="closing-note">
+    <p><strong>常见疑问摘要</strong></p>
+    <p>—— 澳门彩与一般彩票有何不同？主要在于区域发行体系与开奖频率，具体差异在站内规则页面有分项说明。</p>
+    <p>—— 网站内容是否定期更新？开奖结果与规则变动会持续整理，但非官方渠道，仅供参考。</p>
+    <p>—— 是否需要注册或付费？站点为纯信息页面，无需登录，不涉及任何费用或交易。</p>
+  </div>
+
+  <!-- 温和结尾 -->
+  <div style="margin: 2rem 0 0.5rem; background: #ffffff; padding: 1.4rem 1.8rem; border-radius: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+    <p style="font-size: 0.98rem; color: #3c3a36;">总的来说，澳门彩这个站点更像是一扇安静的窗，让有意了解澳门彩票的读者能够不慌不忙地获取基础信息。如果你对澳门彩的规则、历史或常见概念仍有好奇，不妨从<a href="https://cn-macaulottery.com">澳门彩</a>的主页开始，按自己的节奏慢慢翻阅。</p>
+  </div>
+
+  <hr>
+  <div class="footer-meta">
+    <span>基于公开资料整理 · 仅供知识参考</span>
+  </div>
+
+</main>
+
+</body>
+</html>
