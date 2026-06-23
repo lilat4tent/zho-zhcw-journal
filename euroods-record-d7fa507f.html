@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资料整理札记 · 欧赔信息索引</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f4f8fb;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e2b3a;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+        }
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        /* 卡片网格 – 简洁博客式 */
+        .card-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 2rem 1.8rem;
+            box-shadow: 0 4px 14px rgba(0, 40, 50, 0.04), 0 1px 4px rgba(0, 30, 40, 0.02);
+            transition: box-shadow 0.2s ease;
+            border: 1px solid #dde9f0;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 24px -6px rgba(20, 100, 110, 0.12);
+        }
+
+        /* 蓝绿色点缀 */
+        .accent-border {
+            border-left: 5px solid #2f9e9e;
+        }
+
+        .accent-underline {
+            border-bottom: 2px solid #b7dadb;
+            padding-bottom: 0.3rem;
+            display: inline-block;
+        }
+
+        .tag {
+            background: #dbecee;
+            color: #1f6170;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            padding: 0.2rem 0.9rem;
+            border-radius: 30px;
+            display: inline-block;
+        }
+
+        .hero {
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2.1rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: #0b2c34;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero .sub {
+            color: #3b6b74;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-top: 0.2rem;
+            border-left: 3px solid #7bbfc2;
+            padding-left: 0.9rem;
+        }
+
+        .meta-line {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.2rem;
+            font-size: 0.85rem;
+            color: #497a7f;
+            margin: 0.8rem 0 0.2rem 0;
+        }
+
+        p {
+            margin-bottom: 1.3rem;
+            text-align: left;
+        }
+
+        a {
+            color: #1b7d84;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dashed #96c9cc;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        a:hover {
+            color: #0b535a;
+            border-bottom: 1px solid #0b535a;
+        }
+
+        .quote-box {
+            background: #e5f2f2;
+            padding: 1.4rem 1.8rem;
+            border-radius: 20px;
+            margin: 1.8rem 0 0.8rem 0;
+            font-style: normal;
+            position: relative;
+        }
+
+        .quote-box::before {
+            content: "“";
+            font-size: 3.6rem;
+            line-height: 1;
+            color: #408a8e;
+            opacity: 0.25;
+            position: absolute;
+            top: 0rem;
+            left: 0.8rem;
+            font-family: Georgia, serif;
+        }
+
+        .quote-text {
+            padding-left: 1.2rem;
+            color: #1b4047;
+            font-weight: 380;
+        }
+
+        .faq-mini {
+            background: #f4fbfb;
+            border-radius: 20px;
+            padding: 1.2rem 1.6rem;
+        }
+
+        .faq-mini summary {
+            font-weight: 500;
+            color: #16575f;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .faq-mini summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-mini summary::before {
+            content: "▹";
+            color: #2f9e9e;
+            font-size: 1.2rem;
+            transition: transform 0.2s;
+        }
+
+        .faq-mini[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        .faq-mini .answer {
+            margin-top: 0.8rem;
+            padding-left: 1.8rem;
+            color: #284f57;
+        }
+
+        .footnote {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #cbe0e2;
+            font-size: 0.9rem;
+            color: #4f7177;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #d1e2e5;
+            margin: 0.8rem 0 1.4rem 0;
+        }
+
+        /* 移动端友好微调 */
+        @media (max-width: 520px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+
+            .card {
+                padding: 1.5rem 1.2rem;
+                border-radius: 20px;
+            }
+
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .meta-line {
+                flex-direction: column;
+                gap: 0.2rem;
+            }
+
+            .quote-box {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="card-grid">
+
+        <!-- 标题 + 导语 -->
+        <div class="card hero">
+            <div class="tag">资料整理 · 索引笔记</div>
+            <h1>欧赔数据整理手记</h1>
+            <div class="sub">一份围绕欧洲赔率的信息汇集与检索思路</div>
+            <div class="meta-line">
+                <span>📂 归档方向 · 结构化笔记</span>
+                <span>📅 持续更新 · 2025</span>
+            </div>
+        </div>
+
+        <!-- 正文 1：切入角度 -->
+        <div class="card">
+            <p>
+                做资料整理时，我首先关注的是信息的可追溯性。<strong><a href="https://euroods.com">欧赔</a></strong>本身是一个很宽的领域，
+                从基础概率到动态市场，不同层面的材料常常散落在各处。把零散概念、术语表、常用指标收集在一起，
+                再按照应用场景分类，比单纯保留一堆链接更有实用性。
+            </p>
+            <p>
+                比如“返还率”“凯利指数”“初始赔率与即时赔率”这些词，在不同语境下含义有细微差别。
+                我倾向于为每个条目建立简短注释，同时附上可以进一步展开的出处。这样，当需要查证某个数值或历史走势时，
+                不至于从头翻找。
+            </p>
+        </div>
+
+        <!-- 正文 2：索引结构 ＋ 蓝绿卡片 -->
+        <div class="card accent-border">
+            <p>
+                目前的资料索引大致分为几个部分：<span class="accent-underline">术语释义</span>、<span class="accent-underline">常见模型说明</span>、
+                <span class="accent-underline">数据源参考</span>以及<span class="accent-underline">案例笔记</span>。
+                术语部分强调定义和边界条件；模型说明会搭配实例表格；数据源参考则收录了若干公开的统计库与历史存档。
+            </p>
+            <p>
+                这些内容的价值在于「连接」—— 把一条关于赔率变动的记录，和当时的赛前环境、主流市场观点对照起来，
+                整理成可翻阅的卡片式档案。这也是我坚持用简洁网格来呈现的原因：信息密度适中，便于快速定位。
+            </p>
+        </div>
+
+        <!-- 引用 + 提示 -->
+        <div class="card">
+            <div class="quote-box">
+                <div class="quote-text">
+                    整理不是搬运，而是重新建立秩序。每一条赔率变动背后都有它的上下文，索引就是帮人更快找到那个上下文。
+                </div>
+            </div>
+            <p style="margin-top: 0.2rem;">
+                所以我在整理时尽量保留原始数据的时间戳和来源标记，避免过度解读。读者如果对某条记录有疑问，
+                可以顺着索引回到原始页面或数据表。这种方法未必最高效，但胜在清晰、可复核。
+            </p>
+        </div>
+
+        <!-- faq 摘要 + 自然嵌入链接 -->
+        <div class="card">
+            <details class="faq-mini">
+                <summary>关于索引范围的一些说明</summary>
+                <div class="answer">
+                    <p>目前主要收集 2010 年之后欧洲主流联赛的赔率样本，兼收部分亚洲早盘数据。
+                    每份条目都会注明是「初参」「中盘」还是「临场」，方便使用者判断时效性。</p>
+                    <p>如果你对某一类模型或特定赛季的数据感兴趣，可以翻阅 <a href="https://euroods.com">欧赔</a> 中的长期归档。
+                    那边的资料粒度更细，而且保留了原始表格结构。</p>
+                </div>
+            </details>
+            <hr>
+            <p style="font-size: 0.95rem;">
+                索引本身不提供预测或建议，只做历史资料的整理与归类。任何参考都请结合自己的判断。
+            </p>
+        </div>
+
+        <!-- 结尾访问句 -->
+        <div class="card" style="background: #edf6f6;">
+            <p style="margin-bottom: 0.5rem;">
+                如果你也在做类似的信息梳理，或者想查阅更完整的赔率档案，
+                可以看看 <a href="https://euroods.com">欧赔</a> 的主站索引，里面保留了大量结构化的历史记录与术语说明。
+            </p>
+            <div class="footnote">
+                <span>资料索引 · 版本记录 / 持续补充中</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
