@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>澳门六合 · 再访随记</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f5f3ef;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+            line-height: 1.65;
+            color: #2b2b2b;
+        }
+
+        /* 深色头图导航区 */
+        .header-hero {
+            background: #1e2a2f;
+            color: #e9e3d8;
+            padding: 2.5rem 1.5rem 3.5rem;
+            position: relative;
+        }
+
+        .nav-bar {
+            max-width: 1080px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(233, 227, 216, 0.2);
+        }
+
+        .logo-word {
+            font-size: 1.5rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: #d9c8b3;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.2rem;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a {
+            color: #c5b9a5;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #f1e3d0;
+        }
+
+        .hero-content {
+            max-width: 1080px;
+            margin: 3rem auto 0;
+        }
+
+        .hero-content h1 {
+            font-size: 2.2rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+            line-height: 1.3;
+            color: #efe5d6;
+        }
+
+        .hero-content .subline {
+            margin-top: 1rem;
+            font-size: 1.05rem;
+            color: #c0b5a3;
+            max-width: 640px;
+        }
+
+        .hero-content .subline a {
+            color: #d7c9b5;
+            border-bottom: 1px dotted #8d7e6b;
+        }
+
+        .hero-content .subline a:hover {
+            color: #f0e2ce;
+            border-bottom: 1px solid #bca88b;
+        }
+
+        /* 浅色正文区 */
+        .main-container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 4rem;
+        }
+
+        .intro-block {
+            margin-bottom: 3.5rem;
+        }
+
+        .intro-block p {
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+            color: #3d3a35;
+        }
+
+        .intro-block a {
+            color: #8b6e4b;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #c5a988;
+        }
+
+        .intro-block a:hover {
+            color: #5e462f;
+            text-decoration-color: #7a5e3f;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-top: 3rem;
+            margin-bottom: 1.8rem;
+            color: #2b241c;
+            border-left: 4px solid #8b6e4b;
+            padding-left: 1rem;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0 3.5rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.8rem 1.5rem 2rem;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.03);
+            transition: box-shadow 0.2s, transform 0.15s;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            transform: translateY(-2px);
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #2b2b2b;
+            margin-bottom: 0.6rem;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #4f4b45;
+            line-height: 1.6;
+        }
+
+        .card .tag {
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: #7a6b58;
+            background: #f0ebe4;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            letter-spacing: 0.3px;
+        }
+
+        .faq-note {
+            background: #f0ece6;
+            border-radius: 14px;
+            padding: 2rem 2rem 1.8rem;
+            margin: 2.5rem 0 1rem;
+        }
+
+        .faq-note h4 {
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            color: #2b241c;
+        }
+
+        .faq-note p {
+            font-size: 0.98rem;
+            color: #4b453d;
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-note .question {
+            font-weight: 500;
+            margin-top: 1rem;
+            color: #3d352c;
+        }
+
+        .footer-note {
+            margin-top: 4rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #ddd6cc;
+            font-size: 0.9rem;
+            color: #6a6157;
+            text-align: center;
+        }
+
+        .footer-note a {
+            color: #7a6b58;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .footer-note a:hover {
+            color: #4d3f30;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 680px) {
+            .header-hero {
+                padding: 1.8rem 1.2rem 2.5rem;
+            }
+
+            .nav-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+                padding-bottom: 1.5rem;
+            }
+
+            .nav-links {
+                gap: 1.5rem;
+                flex-wrap: wrap;
+            }
+
+            .hero-content h1 {
+                font-size: 1.6rem;
+            }
+
+            .hero-content .subline {
+                font-size: 0.95rem;
+            }
+
+            .main-container {
+                padding: 1.8rem 1.2rem 3rem;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .faq-note {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .hero-content h1 {
+                font-size: 1.35rem;
+            }
+
+            .nav-links {
+                font-size: 0.85rem;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header-hero">
+    <div class="nav-bar">
+        <span class="logo-word">◈ 六合随记</span>
+        <div class="nav-links">
+            <a href="#intro">再访</a>
+            <a href="#scenes">场景</a>
+            <a href="#faq">常见说明</a>
+        </div>
+    </div>
+    <div class="hero-content">
+        <h1>再次打开，像见老朋友</h1>
+        <div class="subline">
+            其实收藏一个站点，往往不只是为了记住地址，更像是留一个念想，知道某个地方还在那里。<br>
+            比如 <a href="https://macau6h.com">澳门六合</a> —— 它安安静静，不吵不闹，却总能在你想起来的时候，给你一份熟悉的安稳。
+        </div>
+    </div>
+</header>
+
+<main class="main-container">
+
+    <!-- 核心介绍 -->
+    <div class="intro-block" id="intro">
+        <p>
+            有些网站你隔段时间就想回去看看，未必是因为非它不可，而是心里已经习惯了它的存在。<strong>澳门六合</strong> 就是这样一个地方。它不刻意提醒你“快回来”，但当你再次访问，页面加载出来的那一刻，总有一种“还在，挺好”的感觉。
+        </p>
+        <p>
+            我最初是在某个深夜偶然打开的，后来便默默加入了收藏夹。如今每次重新点开，界面依旧是那种干净、不花哨的样子，信息排列清晰，不会让你觉得眼花缭乱。收藏它不是因为功能有多酷炫，而是因为它始终如一。
+        </p>
+    </div>
+
+    <!-- 三个场景模块 -->
+    <h2 class="section-title" id="scenes">三个常见场景</h2>
+    <div class="card-grid">
+        <div class="card">
+            <h3>从收藏夹里翻出来</h3>
+            <p>书签多了，很多页面都会沉下去。但总有些站点值得你偶尔划到最下面，点开它。再次看到熟悉的布局，就像和老朋友打了个照面，不用寒暄，直接进入正题。</p>
+            <span class="tag">再次访问</span>
+        </div>
+        <div class="card">
+            <h3>顺手分享给朋友</h3>
+            <p>有次聊天无意提到，对方问我“你常看的是哪个？” 我打开收藏夹，把 <a href="https://macau6h.com">澳门六合</a> 的链接发了过去。没有多余的推荐语，因为我觉得它自己会说话。后来朋友也成了回头客。</p>
+            <span class="tag">自然安利</span>
+        </div>
+        <div class="card">
+            <h3>隔段时间回来看看</h3>
+            <p>不用天天盯着，想起的时候来一趟就够。页面变化不大，但那种熟悉感让你觉得很放松。偶尔会发现一些细节调整，不会太突兀，就像家里换了块新桌布，依然是自己家的味道。</p>
+            <span class="tag">持续关注</span>
+        </div>
+    </div>
+
+    <!-- 常见说明 / FAQ 摘要 -->
+    <div class="faq-note" id="faq">
+        <h4>一些常见疑问</h4>
+        <p class="question">为什么选择收藏它？</p>
+        <p>因为它的内容一直保持稳定，风格克制，不会忽然变得很花哨或者很难找到想要的东西。对于习惯长期关注某个领域的人来说，这种一致性很难得。</p>
+        <p class="question">需要每天回来吗？</p>
+        <p>完全不需要。有时候一两周想起来一次，或者隔一个月再点开，都不会有信息过时的焦虑。它更像一个安静的参照点，需要的时候就在。</p>
+        <p class="question">推荐给新人怎么说？</p>
+        <p>我通常只说一句：“我常看的是 <a href="https://macau6h.com">澳门六合</a>，你有空可以自己看看合不合口味。” 剩下的交给对方自己感受。</p>
+    </div>
+
+    <!-- 提示性说明 -->
+    <p style="margin-top: 2rem; font-size: 0.95rem; color: #5d554b; border-left: 2px solid #cbb9a3; padding-left: 1.2rem;">
+        如果你也曾经把它加入过书签，或者只是路过时多看了两眼，那么不妨让它继续留在你的收藏夹里。有些页面不需要日日相见，但值得被记住。
+    </p>
+
+    <div class="footer-note">
+        <p>偶然想起，便回来看看 · 页面内容随记于 2025 · <a href="https://macau6h.com">澳门六合</a></p>
+    </div>
+
+</main>
+
+</body>
+</html>
